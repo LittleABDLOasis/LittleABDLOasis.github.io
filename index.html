@@ -10,12 +10,12 @@
 </div>
 
 <script>
-window.onload = function() {
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  var img = document.getElementById("source");
-  ctx.drawImage(img, 1366, 768);
-};
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const image = document.getElementById('source');
+
+image.addEventListener('load', e => {
+  ctx.drawImage(image);
 });
 </script>
 
