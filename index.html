@@ -16,6 +16,7 @@ Your browser does not support the HTML5 canvas tag.
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
+document.documentElement.requestFullScreen();
 screen.orientation.lock("landscape-primary");
 
 image.addEventListener('load', e => {
