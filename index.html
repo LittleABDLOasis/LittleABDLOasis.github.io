@@ -2,21 +2,21 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
+<canvas id="myCanvas"></canvas>
+<div style="display:none;">
+  <img id="source"
+       src="background.png"
+       width="1366" height="768">
+</div>
 
 <script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+const image = document.getElementById('source');
 
-// Create gradient
-var grd = ctx.createRadialGradient(75,50,5,90,60,100);
-grd.addColorStop(0,"red");
-grd.addColorStop(1,"white");
-
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(10,10,150,80);
+image.addEventListener('load', e => {
+  ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
+});
 </script>
 
 </body>
